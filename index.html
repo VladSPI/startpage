@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя экспресс-панель</title>
+  <style>
+    :root {
+      --bg: #f0f2f5;
+      --tile-bg: #fff;
+      --tile-text: #333;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --tile-bg: #1e1e1e;
+        --tile-text: #f1f1f1;
+        --shadow: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .tile {
+      background: var(--tile-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 8px var(--shadow);
+      text-align: center;
+      padding: 20px 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px var(--shadow);
+    }
+
+    .tile img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+
+    .tile a {
+      text-decoration: none;
+      color: var(--tile-text);
+      font-size: 14px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    async function loadLinks() {
+      try {
+        const response = await fetch("links.json");
+        const links = await response.json();
+
+        const grid = document.getElementById("grid");
+        links.forEach(link => {
+          const tile = document.createElement("div");
+          tile.className = "tile";
+          tile.innerHTML = `
+            <a href="${link.url}">
+              <img src="${link.icon}" alt="${link.name}">
+              ${link.name}
+            </a>
+          `;
+          grid.appendChild(tile);
+        });
+      } catch (e) {
+        console.error("Ошибка загрузки ссылок:", e);
+      }
+    }
+
+    loadLinks();
+  </script>
+</body>
+</html>
