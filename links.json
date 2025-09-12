@@ -18,5 +18,10 @@
     "name": "OpenAI",
     "url": "https://openai.com",
     "icon": "https://openai.com/favicon.ico"
-  }
+  },
+  {
+    "name": "БФМ.RU",
+    "url": "https://www.bfm.ru",
+    "icon": "https://www.bfm.ru//favicon.ico"
 ]
+
