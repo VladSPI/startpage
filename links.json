@@ -43,8 +43,14 @@
     "name": "NewKaliningrad",
     "url": "https://www.newkaliningrad.ru/",
     "icon": "https://www.newkaliningrad.ru/images/logo.gif"
+  },
+  {
+    "name": "RTVI",
+    "url": "https://rtvi.com/",
+    "icon": "https://rtvi.com/wp-content/themes/rtvi/images/logo.svg"
   }
 ]
+
 
 
 
