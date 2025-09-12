@@ -21,9 +21,21 @@
   },
   {
     "name": "BFM.RU",
-    "url": "https://www.bfm.ru"
+    "url": "https://www.bfm.ru",
+    "icon": "https://s.bfm.ru/images/main_logo.png"
+  },
+  {
+    "name": "Newsru",
+    "url": "https://www.newsru.co.il/world/",
+    "icon": "https://static2.newsru.co.il/images/logo-white.svg"
+  },
+  {
+    "name": "Reddit",
+    "url": "https://www.reddit.com",
+    "icon": "https://redditinc.com/hs-fs/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Logo.png?width=600&height=600&name=Reddit_Logo.png"
   }
 ]
+
 
 
 
