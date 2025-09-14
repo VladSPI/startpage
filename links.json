@@ -41,8 +41,7 @@
   },
   {
     "name": "NewKaliningrad",
-    "url": "https://www.newkaliningrad.ru/",
-    "icon": "https://www.newkaliningrad.ru/images/logo.gif"
+    "url": "https://www.newkaliningrad.ru/"
   },
   {
     "name": "RTVI",
@@ -50,6 +49,7 @@
     "icon": "https://rtvi.com/wp-content/themes/rtvi/images/logo.svg"
   }
 ]
+
 
 
 
